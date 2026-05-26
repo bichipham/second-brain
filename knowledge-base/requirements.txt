@@ -5,6 +5,7 @@ pytest
 
 # Media Ingestion
 pypdf
+numpy<2
 openai-whisper
 ffmpeg-python
 

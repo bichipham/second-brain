@@ -250,6 +250,8 @@ def test_normalize_path_traversal_rejected():
     assert normalize_notes.validate_output_path("2-areas/systems/payment-service.md") is True
     assert normalize_notes.validate_output_path("2-areas/architecture/retry-pattern.md") is True
     assert normalize_notes.validate_output_path("3-resources/playbooks/debug-payment.md") is True
+    assert normalize_notes.validate_output_path("3-resources/playbooks/python/debug-venv.md") is True
+    assert normalize_notes.validate_output_path("3-resources/concepts/java/jvm-overview.md") is True
 
     # Non-.md extension
     assert normalize_notes.validate_output_path("2-areas/systems/file.txt") is False

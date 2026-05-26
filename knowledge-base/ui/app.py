@@ -76,7 +76,9 @@ async def get_navigation():
     def scan_dir(path: Path):
         files = []
         if path.exists():
-            for f in sorted(path.glob("*.md")):
+            for f in sorted(path.rglob("*.md")):
+                if f.name.lower() == "readme.md" and f.parent != path:
+                    continue
                 try:
                     post = frontmatter.load(f)
                     files.append({

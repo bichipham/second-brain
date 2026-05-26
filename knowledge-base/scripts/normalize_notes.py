@@ -64,14 +64,20 @@ Rules:
   - concept: Definition / Synonyms & Aliases / Business Context / Related Knowledge
   - playbook: Problem / Investigation Steps / Resolution / Prevention / Related Knowledge
   - team: Responsibilities & Scope / Members & Roles / Related Knowledge
-- File paths must follows:
+- TOPIC SUBFOLDERS:
+    - When the notes are clearly about a language, framework, platform, or tool family, group concepts and playbooks into a topic subfolder.
+    - Examples: `nextjs`, `python`, `java`, `react`, `docker`, `kubernetes`.
+    - Keep the subfolder name lowercase kebab-case and reuse an existing topic folder when one already fits.
+- File paths must follow:
   - 1-projects/<name>.md
   - 2-areas/systems/<name>.md
   - 2-areas/architecture/<name>.md
   - 2-areas/architecture/adrs/<name>.md
   - 2-areas/teams/<name>.md
   - 3-resources/concepts/<name>.md
+    - 3-resources/concepts/<topic>/<name>.md
   - 3-resources/playbooks/<name>.md
+    - 3-resources/playbooks/<topic>/<name>.md
 - Use lowercase kebab-case filenames.
 
 Notes:
@@ -155,13 +161,11 @@ def _run_claude_json(prompt: str, schema: dict) -> dict:
     """
     cmd = [
         "claude",
-        "--bare",
         "-p", prompt,
         "--output-format", "json",
         "--json-schema", json.dumps(schema),
         "--no-session-persistence",
         "--dangerously-skip-permissions",
-        "--max-turns", "1",
     ]
 
     try:
@@ -178,7 +182,9 @@ def _run_claude_json(prompt: str, schema: dict) -> dict:
         )
 
     if result.returncode != 0:
-        stderr_msg = result.stderr.strip() if result.stderr else "(no stderr)"
+        stderr_msg = result.stderr.strip() if result.stderr else ""
+        if not stderr_msg:
+            stderr_msg = result.stdout.strip() if result.stdout else "(no stderr or stdout)"
         raise ClaudeError(f"Error: Claude CLI returned error: {stderr_msg}")
 
     try:
@@ -358,7 +364,12 @@ def main():
     # Automatically rebuild the index after processing notes
     print("\nRebuilding knowledge index...")
     try:
-        build_index.main()
+        original_argv = sys.argv[:]
+        try:
+            sys.argv = ["build_index.py"]
+            build_index.main()
+        finally:
+            sys.argv = original_argv
     except Exception as exc:
         print(f"Warning: Could not rebuild index: {exc}", file=sys.stderr)
 

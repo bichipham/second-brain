@@ -257,7 +257,7 @@
                     window.removeEventListener('keydown', handleKey);
                     window.removeEventListener('hashchange', handleHashChange);
                 }
-            }, [nav]); // Re-run if nav loads to ensure we can match paths if needed
+            }, []);
 
             const selectDoc = (item, updateHash = true) => {
                 setLoading(true);
