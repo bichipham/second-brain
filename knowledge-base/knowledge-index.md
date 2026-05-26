@@ -7,6 +7,12 @@ _Generated: 2026-05-26_
 - [Next.js Overview](./3-resources/concepts/nextjs/nextjs-overview.md) — `concept`, `nextjs`, `react`, `framework`, `full-stack`, `ssr`, `frontend`
 - [Next.js Rendering Strategies](./3-resources/concepts/nextjs/nextjs-rendering-strategies.md) — `concept`, `nextjs`, `rendering`, `ssr`, `ssg`, `isr`, `streaming`, `static`, `dynamic`, `cache`
 - [Next.js: Server Components vs Client Components](./3-resources/concepts/nextjs/nextjs-server-vs-client-components.md) — `concept`, `nextjs`, `react`, `server-components`, `client-components`, `app-router`, `rsc`, `rendering`
+- [TypeScript Cơ Bản](./3-resources/concepts/nextjs/typescript-basics.md) — `concept`, `typescript`, `nextjs`, `javascript`, `static-typing`, `beginner`, `api`, `payload`
+- [TypeScript Nâng Cao](./3-resources/concepts/nextjs/typescript-advanced.md) — `concept`, `typescript`, `nextjs`, `advanced`, `utility-types`, `generics`, `react`
+- [Web Performance — Core Web Vitals Overview](./3-resources/concepts/nextjs/web-performance/overview.md) — `concept`, `performance`, `core-web-vitals`, `inp`, `lcp`, `tbt`, `cls`, `nextjs`
+- [Web Performance — Interaction to Next Paint (INP)](./3-resources/concepts/nextjs/web-performance/inp.md) — `concept`, `performance`, `inp`, `core-web-vitals`, `nextjs`, `javascript`, `rendering`, `web-workers`
+- [Web Performance — Largest Contentful Paint (LCP)](./3-resources/concepts/nextjs/web-performance/lcp.md) — `concept`, `performance`, `lcp`, `core-web-vitals`, `nextjs`, `images`, `fonts`, `rendering`
+- [Web Performance — Total Blocking Time (TBT)](./3-resources/concepts/nextjs/web-performance/tbt.md) — `concept`, `performance`, `tbt`, `lab-metric`, `long-tasks`, `javascript`, `main-thread`
 
 ## Playbooks
 
