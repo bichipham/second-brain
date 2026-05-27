@@ -1,12 +1,16 @@
 # Knowledge Index
 
-_Generated: 2026-05-26_
+_Generated: 2026-05-27_
 
 ## Concepts & Glossary
 
+- [File CSV — Nguồn gốc và cách thu thập dữ liệu](./3-resources/concepts/python/python-csv-sources.md) — `concept`, `python`, `csv`, `data-collection`, `web-scraping`, `api`, `database`, `iot`
 - [Next.js Overview](./3-resources/concepts/nextjs/nextjs-overview.md) — `concept`, `nextjs`, `react`, `framework`, `full-stack`, `ssr`, `frontend`
 - [Next.js Rendering Strategies](./3-resources/concepts/nextjs/nextjs-rendering-strategies.md) — `concept`, `nextjs`, `rendering`, `ssr`, `ssg`, `isr`, `streaming`, `static`, `dynamic`, `cache`
 - [Next.js: Server Components vs Client Components](./3-resources/concepts/nextjs/nextjs-server-vs-client-components.md) — `concept`, `nextjs`, `react`, `server-components`, `client-components`, `app-router`, `rsc`, `rendering`
+- [Python Advanced File Writing](./3-resources/concepts/python/python-advance-file.md) — `concept`, `python`, `file-io`, `programming`
+- [Python Căn Bản](./3-resources/concepts/python/python-basics.md) — `concept`, `python`, `programming`, `basics`, `beginner`
+- [Python Nâng Cao cho AI (Level 71–80C)](./3-resources/concepts/python/python-advance-ai.md) — `concept`, `python`, `pandas`, `numpy`, `matplotlib`, `machine-learning`, `ai`, `data-science`
 - [TypeScript Cơ Bản](./3-resources/concepts/nextjs/typescript-basics.md) — `concept`, `typescript`, `nextjs`, `javascript`, `static-typing`, `beginner`, `api`, `payload`
 - [TypeScript Nâng Cao](./3-resources/concepts/nextjs/typescript-advanced.md) — `concept`, `typescript`, `nextjs`, `advanced`, `utility-types`, `generics`, `react`
 - [Web Performance — Core Web Vitals Overview](./3-resources/concepts/nextjs/web-performance/overview.md) — `concept`, `performance`, `core-web-vitals`, `inp`, `lcp`, `tbt`, `cls`, `nextjs`
